@@ -3,8 +3,8 @@ import pandas as pd
 
 app = Flask(__name__)
 
-escalated_alerts = pd.read_excel('Escalated alerts August 2024.xlsx')
-hrj = pd.read_excel('HRJ_20230901-20240831.xlsx')
+escalated_alerts = pd.read_excel('alerts.xlsx')
+hrj = pd.read_excel('HRJ.xlsx')
 
 def search_in_files(search_term, search_type, file_choice):
     if file_choice == 'escalated_alerts':
@@ -41,4 +41,4 @@ def index():
     return render_template('search.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, host='22.232.100.153', port=5015)
+    app.run(debug=True, host='00.000.000.000', port=8000)
